@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Rady Business</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/rady logo.png" alt="Rady Business Logo">
+            <h2>Rady Business</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#latest">Showcase</a></li>
+                <li><a href="#collection">Collection</a></li>
+                <li><a href="#testimonial">Testimonial</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>
+                    REPRESENT YOUR STYLE <br>
+                    <span>WEAR YOUR COUNTRY</span>
+                </h1>
+
+                <p>
+                    Premium sports & country inspired apparel
+                </p>
+
+            <a href="https://radybusiness.com/collections/" target="_blank" class="btn">Shop Now</a>
+            </div>
+
+            <div class="hero-image">
+            <img src="img/hero img.jpeg" alt="Product">
+            </div>
+        </section>
+        
+        <section id="collection" class="collection">
+            <h2 class="section-title">LATEST COLLECTION</h2>
+
+            <div class="collection-grid">
+
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="img/colll.jpeg" alt="Customer Favorites">
+                    <div class="overlay">
+                        <h3>Customer Favorites</h3>
+                        <a href="https://radybusiness.com/collections/" target="_blank" class="btn">Shop Best Sellers →</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="img/countryfav.png" alt="Country Collection">
+                    <div class="overlay">
+                        <h3>Country Collection</h3>
+                        <a href="https://radybusiness.com/collections/" target="_blank" class="btn">Shop Now →</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card dark">
+                    <img src="img/coll.jpeg" alt="">
+                    <div class="text-content">
+                        <h3>New Arrivals</h3>
+                        <a href="https://radybusiness.com/collections/" target="_blank" class="btn-outline">Shop the Collection</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonial" class="testimonial">
+
+            <h2 class="title">Testimonials</h2>
+
+            <div class="slider">
+                <div class="slide active">
+                    <p>
+                        I’ve tried a lot of brands, but the quality of these pieces genuinely surprised me. The hoodie feels premium, the stitching is solid, and the fit is exactly what I was looking for relaxed but still sharp. Definitely my new go-to for everyday wear.
+                    </p>
+                    <h4>— Samantha R</h4>
+                </div>
+
+                <div class="slide">
+                    <p>
+                        For the price, the quality is incredible. It honestly feels like something
+                        that should cost way more.
+                    </p>
+                    <h4>— Aisha K</h4>
+                </div>
+
+                <div class="slide">
+                    <p>
+                        I love how simple but stylish the designs are. It’s minimal, but it stands out in a clean way. I wore one of the shirts to a casual event and got compliments all night. It just gives that confident, put-together look
+                    </p>
+                    <h4>— Michael T</h4>
+                </div>
+
+                <div class="slide">
+                    <p>
+                        The long sleeve is unbelievably comfortable. It’s soft, breathable, and perfect for layering. I’ve already worn it multiple times this week and it still looks brand new after washing. You can really tell the quality is there.
+                    </p>
+                    <h4>— Daniel M</h4>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <button onclick="prevSlide()">⟵</button>
+                <button onclick="nextSlide()">⟶</button>
+            </div>
+        </section>
+
+        <section id="newsletter" class="newsletter">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get updates on the latest products, offers, and news.</p>
+            <form>
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </section>
+
+        <footer id="contact" class="footer">
+            <div class="footer-container">
+                <!-- LEFT -->
+                <div class="footer-brand">
+                    <h2>Rady Business</h2>
+                    <p></p>
+                </div>
+
+                <!-- RIGHT -->
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h3>Shop</h3>
+                        <a href="#">Hoodies</a>
+                        <a href="#">Mugs</a>
+                        <a href="#">Sweatshirts</a>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3>Support</h3>
+                        <a href="#">Contact</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">Policy</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SOCIAL -->
+            <div class="footer-social">
+                <p>Follow Us</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://audiomack.com" target="_blank"><i class="fab fa-audiomack"></i></a>
+                    <a href="https://www.spotify.com" target="_blank"><i class="fab fa-spotify"></i></a>
+                    <a href="https://www.x.com" target="_blank"><i class="fab fa-x"></i></a>
+                </div>
+            </div>
+
+            <p>© 2025 <strong>The Rady Business</strong> | Powered by <span class="brand">Nexua</span></p>
+            <p class="footer-tagline">Welcome To The Future🚀</p>
+        </footer>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
