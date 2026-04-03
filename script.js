@@ -1,33 +1,35 @@
 let current = 0;
-const slider = document.querySelector(".slider");
-const slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
 
-function updateSlide() {
-    slider.style.transform = `translateX(-${current * 100}%)`;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(index) {
+    // Remove active from all
+    slides.forEach(slide => slide.classList.remove('active'));
+
+    // Add active to current
+    slides[index].classList.add('active');
 }
 
 function nextSlide() {
-    current = (current + 1) % slides.length;
-    updateSlide();
+    currentSlide++;
+
+    if (currentSlide >= slides.length) {
+        currentSlide = 0;
+    }
+
+    showSlide(currentSlide);
 }
 
 function prevSlide() {
-    current = (current - 1 + slides.length) % slides.length;
-    updateSlide();
+    currentSlide--;
+
+    if (currentSlide < 0) {
+        currentSlide = slides.length - 1;
+    }
+
+    showSlide(currentSlide);
 }
-
-let startX = 0;
-
-slider.addEventListener("touchstart", (e) => {
-    startX = e.touches[0].clientX;
-});
-
-slider.addEventListener("touchend", (e) => {
-    let endX = e.changedTouches[0].clientX;
-
-    if (startX > endX + 50) nextSlide();
-    if (startX < endX - 50) prevSlide();
-});
 
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");

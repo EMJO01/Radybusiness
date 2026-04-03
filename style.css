@@ -471,4 +471,13 @@ footer p{
             transform: translateY(0);
         }
     }
+
+    footer {
+        text-align: center;
+    }
+
+    .footer-container {
+        justify-content: center;
+        align-items: center;
+    }
 }
