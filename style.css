@@ -375,6 +375,28 @@ footer p{
     background-color: #f2f2f2;
 }
 
+/* Hamburger icon */
+.hamburger span {
+    background-color: #fff; /* white for dark header */
+}
+
+/* Hamburger base */
+.hamburger {
+    display: none; /* hidden on desktop */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+
 /* Responsive */
 @media screen and (max-width: 1024px) {
     .hero {
@@ -388,22 +410,65 @@ footer p{
     }
 }
 
-@media screen and (max-width: 600px) {
-    header {
+@media screen and (max-width: 768px) {
+
+    /* Hide normal nav */
+    nav ul.nav-links {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 220px;
+        background-color: var(--blue-dark);
         flex-direction: column;
+        padding: 20px;
         gap: 15px;
+        display: none;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     }
 
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
+    /* Show when active */
+    nav ul.nav-links.active {
+        display: flex;
+        animation: fadeIn 0.3s ease;
     }
 
-    .newsletter form {
-        flex-direction: column;
+    nav ul.nav-links li a {
+        color: #fff;
+        font-size: 1rem;
     }
 
-    .newsletter input[type="email"] {
-        width: 100%;
+    /* Hamburger */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Header stays row (IMPORTANT) */
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+    }
+
+    /* Logo smaller on mobile */
+    header .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    header h2 {
+        font-size: 1.2rem;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 }

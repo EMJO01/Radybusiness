@@ -28,3 +28,32 @@ slider.addEventListener("touchend", (e) => {
     if (startX > endX + 50) nextSlide();
     if (startX < endX - 50) prevSlide();
 });
+
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+const newsletterForm = document.querySelector('form[name="newsletter"]');
+
+if (newsletterForm) {
+    const successMessage = newsletterForm.querySelector('.success-message');
+
+    newsletterForm.addEventListener('submit', function(e){
+        e.preventDefault();
+
+        fetch("/", {
+            method: "POST",
+            body: new FormData(newsletterForm)
+        })
+        .then(() => {
+            if (successMessage) {
+                successMessage.style.display = "block";
+            }
+            newsletterForm.reset();
+        })
+        .catch(() => alert("Form submission failed!"));
+    });
+}

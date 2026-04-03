@@ -13,14 +13,20 @@
             <img src="img/rady logo.png" alt="Rady Business Logo">
             <h2>Rady Business</h2>
         </div>
+
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#latest">Showcase</a></li>
                 <li><a href="#collection">Collection</a></li>
                 <li><a href="#testimonial">Testimonial</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
@@ -123,9 +129,18 @@
         <section id="newsletter" class="newsletter">
             <h2>Subscribe to Our Newsletter</h2>
             <p>Get updates on the latest products, offers, and news.</p>
-            <form>
-                <input type="email" placeholder="Enter your email" required>
+
+            <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    
+                <input type="hidden" name="form-name" value="newsletter">
+                <input type="hidden" name="bot-field">
+
+                <input type="email" name="email" placeholder="Enter your email" required>
                 <button type="submit" class="btn">Subscribe</button>
+
+                <p class="success-message" style="display:none; color:#fff; margin-top:10px;">
+                    Thanks for subscribing!
+                </p>
             </form>
         </section>
 
@@ -162,8 +177,6 @@
                     <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
                     <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
                     <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://audiomack.com" target="_blank"><i class="fab fa-audiomack"></i></a>
-                    <a href="https://www.spotify.com" target="_blank"><i class="fab fa-spotify"></i></a>
                     <a href="https://www.x.com" target="_blank"><i class="fab fa-x"></i></a>
                 </div>
             </div>
