@@ -1,6 +1,5 @@
 let current = 0;
 let currentSlide = 0;
-
 const slides = document.querySelectorAll('.slide');
 
 function showSlide(index) {
@@ -30,6 +29,10 @@ function prevSlide() {
 
     showSlide(currentSlide);
 }
+
+setInterval(() => {
+    nextSlide();
+}, 5000);
 
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");

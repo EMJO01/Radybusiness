@@ -74,6 +74,7 @@ nav ul li a:hover {
     padding: 100px 50px;
     background-color: #fafafa;
     gap: 50px;
+    min-height: 100vh;
 }
 
 .hero-content h1 {
@@ -99,10 +100,12 @@ nav ul li a:hover {
     font-weight: bold;
     border-radius: 5px;
     transition: background 0.3s ease;
+    transform: scale(1);
 }
 
 .btn:hover {
     background-color: var(--blue-main);
+    transform: scale(1.05);
 }
 
 .hero-image img {
@@ -191,6 +194,10 @@ nav ul li a:hover {
     background-color: #f9f9f9;
     padding: 80px 50px;
     text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .testimonial .title {
@@ -208,10 +215,16 @@ nav ul li a:hover {
     display: none;
     font-size: 1.1rem;
     line-height: 1.6;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    position: absolute;
+    width: 100%;
 }
 
 .slide.active {
     display: block;
+    opacity: 1;
+    position: relative;
 }
 
 .slide h4 {
